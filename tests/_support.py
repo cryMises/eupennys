@@ -37,7 +37,9 @@ def sample_resource(**overrides):
 
 class BansosTestCase(unittest.TestCase):
     def setUp(self):
-        self.tempdir = tempfile.TemporaryDirectory(prefix="bansos-test-")
+        self.tempdir = tempfile.TemporaryDirectory(
+            prefix="bansos-test-", ignore_cleanup_errors=True
+        )
         self.addCleanup(self.tempdir.cleanup)
         self.db_path = Path(self.tempdir.name) / "bansos-test.db"
         self.database = db.Database(self.db_path)
