@@ -1,6 +1,16 @@
-# BANSOS
+# Eupennys
 
 **Local-first research catalog for legitimately free technology resources.**
+
+Browsable catalogue: <https://crymises.github.io/eupennys/> — a single static
+`index.html` at the repository root that reads `exports/catalog.json` in the
+browser. Regenerate the export after catalog changes:
+
+```sh
+bansos --db data/bansos.db export --format json --output exports/catalog.json --force
+```
+
+The CLI, database, and Python package keep the internal name `bansos`.
 
 BANSOS helps you discover, record, compare, and re-verify free technology offers
 without depending on a hosted service, account, API key, or network connection.
