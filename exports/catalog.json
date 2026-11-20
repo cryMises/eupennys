@@ -2,7 +2,7 @@
   "format": "bansos-resources",
   "format_version": 1,
   "schema_version": 1,
-  "exported_at": "2026-11-20T01:33:39Z",
+  "exported_at": "2026-11-20T01:43:01Z",
   "count": 769,
   "resources": [
     {
@@ -680,7 +680,7 @@
       "description": "Multi-provider AI model gateway offering a $0 Free plan giving access to basic models through one API with a documented per-minute and per-day request cap.",
       "offer_type": "free_tier",
       "pricing_notes": "Landing page shows a Free plan at $0.00/month alongside paid tiers from $9.99 to $199.99 per month; paid tiers are metered in daily/weekly/monthly credits, while the Free plan is described as basic models with request caps rather than credits.",
-      "included_limits": "Free plan: 1 request per minute and 1,000 requests per day on basic models. Paid tiers step up to 20-120 requests per minute with credit allowances (for example Starter $9.99 at 20 requests/min and 1,200 credits per month).",
+      "included_limits": "Free plan: 1 request per minute and 1,000 requests per day on basic models. The live /v1/models catalogue marks 26 entries with tier=free out of 782 listed models; at check time only gpt-oss-20b, kimi-k2.7-code, mistral-large-4 and llama-instant were operational, gemma3-270m:free was degraded, and the remaining Mistral and Suno free-tier entries were listed as major outage.",
       "eligibility_requirements": "Sign up for an account; no payment stated for the Free plan.",
       "payment_method_required": "no",
       "country_availability": "Not stated on the page read.",
@@ -690,10 +690,10 @@
       "last_verified_at": "2026-11-20T00:00:00Z",
       "expiration_at": null,
       "verification_status": "verified",
-      "verification_evidence": "Source: https://api.airforce/. Accessed 2026-11-20 UTC. Observed: pricing section lists a Free tier at $0.00/month for testing and hobby projects with 1 request per minute, 1,000 requests per day and access to basic models; paid Starter-Premium-Plus-Pro-Master-Elite-Ultra tiers run $9.99-$199.99 per month with credits instead of daily request caps. Site advertises OpenAI-, Anthropic- and Gemini-compatible endpoints with a Bearer API key and links a signup page. Payment-method requirement for the free tier is not stated on the page.",
+      "verification_evidence": "Source: https://api.airforce/ and the live catalogue https://api.airforce/v1/models. Accessed 2026-11-19, rechecked 2026-11-20 UTC. Observed: the landing page lists a Free plan at $0.00/month with 1 request per minute and 1,000 requests per day on 'basic models', with paid plans from $9.99 to $199.99 per month. The unauthenticated /v1/models catalogue returned 782 entries and marked 26 with tier=free; at check time only gpt-oss-20b, kimi-k2.7-code, mistral-large-4 and llama-instant were operational, gemma3-270m:free was degraded, and the remaining Mistral and Suno free-tier entries were listed as major outage. Which models count as 'basic' on the Free plan is still not defined by the page, and no payment-method requirement for the free tier is stated.",
       "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC. Observed: the official landing page lists a Free plan at $0.00/month with 1 request per minute and 1,000 requests per day on 'basic models', with paid plans from $9.99 to $199.99 per month carrying higher per-minute limits and credit allowances; the page also mentions pay-as-you-go pricing without specifying rates. Provider-documented content policy: not stated; no acceptable-use, moderation, or content policy appeared on the page. Remaining uncertainty: which models count as 'basic' on the Free plan, whether a payment method is required at signup, and whether the Free plan has any further usage restriction not shown on the landing page.",
       "created_at": "2026-11-20T01:30:22Z",
-      "updated_at": "2026-11-20T01:32:08Z"
+      "updated_at": "2026-11-20T01:42:45Z"
     },
     {
       "id": 279,
@@ -1094,20 +1094,20 @@
       "description": "Permanent free 'Lite' plan on Awan LLM's LLM inference API, offering daily request allowances on small, medium and large models with no token cap.",
       "offer_type": "always_free",
       "pricing_notes": "Pricing page lists Lite at $0/month described as 'For testing & fun!' and as a forever plan; paid tiers Core, Plus, Pro, Max and Enterprise sit above it. Payment is by PayPal 'for now'; no amount is needed for Lite.",
-      "included_limits": "Lite tier per day: 200 requests on small models, 10 requests on medium models, 10 requests on large models, with unlimited tokens; 20 requests per minute; no parallel requests (parallel requests start at Pro).",
+      "included_limits": "Lite tier per day: 200 requests on small models, 10 requests on large models (the models page groups the catalogue into Small and Large only), 20 requests per minute, unlimited tokens, no parallel requests (parallel requests start at higher tiers). Small models: Meta-Llama-3.1-8B-Instruct, Meta-Llama-3-8B-Instruct (3.0 Abliterated), Awanllm-Llama-3-8B-Dolfin, Awanllm-Llama-3-8B-Cumulus. Large models: Meta-Llama-3.1-70B-Instruct, Meta-Llama-3-70B-Instruct.",
       "eligibility_requirements": "Sign up for an Awan LLM account; no payment required for the Lite plan.",
       "payment_method_required": "no",
       "country_availability": "Not stated on the page read.",
       "source_url": "https://www.awanllm.com/pricing",
       "official_terms_url": "",
       "first_seen_at": "2026-11-19T00:00:00Z",
-      "last_verified_at": "2026-11-19T00:00:00Z",
+      "last_verified_at": "2026-11-20T00:00:00Z",
       "expiration_at": null,
       "verification_status": "verified",
-      "verification_evidence": "Source: https://www.awanllm.com/pricing. Accessed 2026-11-19 UTC. Observed: the Lite plan is described as 'For testing & fun!' and forever free, with unlimited tokens, 20 requests/min, and daily caps of 200 requests for Small models, 10 for Medium and 10 for Large. Payment is via PayPal for paid plans; card requirement for the free plan is not stated.",
+      "verification_evidence": "Source: https://www.awanllm.com/pricing and https://www.awanllm.com/models. Accessed 2026-11-19, rechecked 2026-11-20 UTC. Observed: pricing lists Lite at $0/month described as 'For testing & fun!' and a forever plan; the models page labels per-tier daily caps and shows Lite at 200 requests/day for Small models and 10 requests/day for Large models. Small models listed: Meta-Llama-3.1-8B-Instruct, Meta-Llama-3-8B-Instruct (3.0 Abliterated), Awanllm-Llama-3-8B-Dolfin, Awanllm-Llama-3-8B-Cumulus; Large models: Meta-Llama-3.1-70B-Instruct, Meta-Llama-3-70B-Instruct. Tokens are unlimited on Lite and the rate limit is 20 requests/minute with no parallel requests. Paid tiers are billed by PayPal; the Lite plan's payment method and country availability are not stated.",
       "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC. Observed: the official pricing page lists a Lite tier at $0/month marked as a forever plan, with per-day caps of 200 requests on small models and 10 each on medium and large models, unlimited tokens, a 20 requests-per-minute rate limit, and no parallel requests; paid tiers are PayPal-billed and their prices render blank on the page. Provider-documented content policy: not stated on the pricing page. Remaining uncertainty: which model names fall in each size class, whether the free plan requires email verification, and the paid tier prices, which the page did not display.",
       "created_at": "2026-11-20T01:15:09Z",
-      "updated_at": "2026-11-20T01:22:34Z"
+      "updated_at": "2026-11-20T01:42:45Z"
     },
     {
       "id": 18,
@@ -5142,7 +5142,7 @@
       "description": "Free-tier access to Electron Hub's self-hosted ':free' model variants through an OpenAI-compatible API, metered in Neutrinos instead of paid credits.",
       "offer_type": "free_tier",
       "pricing_notes": "Docs describe a Free tier that needs no subscription and can call models whose ID ends in ':free'; those calls consume Neutrinos rather than credits. Freemium and premium models deduct paid credits, and premium/ultimate models require a subscription or permanent credits.",
-      "included_limits": "All users receive 10 Neutrinos per day, resetting at 21:00 UTC, for ':free' models; up to 3 ads per day can raise the daily total to 200 Neutrinos (base 10, +30, +60, +100). Neutrinos are charged for all requests including failed and cancelled ones, unlike credits. Free models are self-hosted and uptime is not guaranteed at peak times. Free tier proxy-key cap is 10 keys.",
+      "included_limits": "All users receive 10 Neutrinos per day, resetting at 21:00 UTC, for ':free' model variants. Up to 3 ads per day raise the daily total to 200 Neutrinos (base 10, +30, +60, +100). Neutrinos are charged for all requests including failed and cancelled ones, unlike credits. Free tier proxy-key cap is 10 keys. The live /v1/models catalogue listed 24 ':free' variants out of 598 entries on 2026-11-20: gpt-oss-20b, gpt-oss-120b, gemma-4-26b-a4b-it, gemma-4-31b-it, gemma-4-uncensored, nemotron-3.5-lightning, deepseek-v3.2, deepseek-v4.1-flash, ministral-3-8b-instruct, mistral-small-3.2-24b-instruct, minimax-m2.7, qwen3-coder-30-a3b-instruct, qwen3.6-27b, qwen3.6-35b-a3b, qwen3.8-27b, aion-3.0-mini, aion-3.0, glm-4.6, glm-4.7, glm-4.7-flash, glm-5, glm-5.1, glm-5.2, glm-5.3-flash.",
       "eligibility_requirements": "Account signup; no subscription needed for free models. Free tier users who buy permanent credits can additionally reach premium (but not ultimate) models.",
       "payment_method_required": "no",
       "country_availability": "Not stated on the pages read.",
@@ -5152,10 +5152,10 @@
       "last_verified_at": "2026-11-20T00:00:00Z",
       "expiration_at": null,
       "verification_status": "verified",
-      "verification_evidence": "Source: https://docs.electronhub.ai/billing/credits.md and https://docs.electronhub.ai/billing/model-access.md. Accessed 2026-11-20 UTC. Observed: docs state Neutrinos are the free usage unit for models whose ID ends in ':free'; every user gets 10 Neutrinos per day resetting 21:00 UTC, and ad rewards (up to 3 ads/day: +30, +60, +100) can raise the daily total to 200. Neutrinos are charged for all requests including failed and cancelled ones, unlike credits. Free models need no subscription, are hosted by Electron Hub, and 100% uptime is explicitly not guaranteed at peak times. Free-tier base rate limit is 5 requests/min; paid tiers run 10-100 requests/min. No payment-card requirement is stated anywhere in the billing docs. Remaining uncertainty: which models currently carry the ':free' suffix, and whether a card is ever requested at signup.",
+      "verification_evidence": "Source: https://docs.electronhub.ai/billing/credits.md and the live catalogue at https://api.electronhub.ai/v1/models. Accessed 2026-11-19 and rechecked 2026-11-20 UTC. Observed: docs grant every user 10 Neutrinos per day resetting 21:00 UTC for models whose ID ends in ':free', with up to 3 ads per day raising the cap to 200 (base 10, +30, +60, +100); Neutrinos are charged even for failed or cancelled requests; free-tier proxy-key cap is 10. The unauthenticated /v1/models catalogue returned 598 entries of which 24 carried the ':free' suffix (gpt-oss-20b, gpt-oss-120b, gemma-4-26b-a4b-it, gemma-4-31b-it, gemma-4-uncensored, nemotron-3.5-lightning, deepseek-v3.2, deepseek-v4.1-flash, ministral-3-8b-instruct, mistral-small-3.2-24b-instruct, minimax-m2.7, qwen3-coder-30-a3b-instruct, qwen3.6-27b, qwen3.6-35b-a3b, qwen3.8-27b, aion-3.0-mini, aion-3.0, glm-4.6, glm-4.7, glm-4.7-flash, glm-5, glm-5.1, glm-5.2, glm-5.3-flash). Free models are self-hosted and the docs state uptime is not guaranteed at peak. Whether signup ever requests a payment method is not stated on the pages read.",
       "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC. Observed: the official docs billing page states all users get 10 Neutrinos per day resetting 21:00 UTC for models with the ':free' suffix, with ad rewards raising the cap to 200 per day, and that Neutrinos are charged even for failed requests; the docs also list free-tier model access, a 10 proxy-key cap, and that free models are self-hosted without 100% uptime. Provider-documented content policy: not stated; the API exposes a separate /moderations endpoint that classifies text against OpenAI usage-policy categories, but no provider-wide content or moderation policy for generation was found on the pages read. Remaining uncertainty: which specific models currently carry the ':free' suffix, and whether a payment method is ever requested on signup.",
       "created_at": "2026-11-20T01:15:09Z",
-      "updated_at": "2026-11-20T01:33:32Z"
+      "updated_at": "2026-11-20T01:42:44Z"
     },
     {
       "id": 520,
@@ -9213,20 +9213,20 @@
       "description": "LLM inference service that lets signed-up users run prompts against a free model without payment, with paid credit packs for larger models; the service advertises an explicitly unfiltered stance.",
       "offer_type": "free_tier",
       "pricing_notes": "Homepage states users can sign up to use a 'pretty good LLM as much as you want, for free', and the pricing page says some models are free while others are bought with prepaid credit packs priced in USD (tax not included). No subscription is offered.",
-      "included_limits": "The site states free use of one 'pretty good' model without a stated token or request cap; the pricing page lists 'free models' but publishes no numeric free quota, rate limit, or concurrency figure.",
+      "included_limits": "The free model is MythoLite (LLaMA 2 13B, tagged Creative/Roleplay on the models page), listed with a 2,560-token context window, a 150-token limit and a price of FREE per token. Every other model on the models page is priced in credits per token. No numeric free quota, request cap or concurrency limit is published for MythoLite.",
       "eligibility_requirements": "Sign up for an account; no payment needed for the free model.",
       "payment_method_required": "no",
       "country_availability": "Not stated on the pages read.",
       "source_url": "https://mancer.tech/",
       "official_terms_url": "",
       "first_seen_at": "2026-11-19T00:00:00Z",
-      "last_verified_at": "2026-11-19T00:00:00Z",
+      "last_verified_at": "2026-11-20T00:00:00Z",
       "expiration_at": null,
       "verification_status": "verified",
-      "verification_evidence": "Source: https://mancer.tech/. Accessed 2026-11-19 UTC. Observed: the site headlines 'No filters / No guidelines / No constraints' and invites signup to 'use a pretty good LLM as much as you want, for free'; paid models are listed separately at /pricing. No rate limits, quotas or expiry are stated on the landing page.",
+      "verification_evidence": "Source: https://mancer.tech/ and https://mancer.tech/models.html. Accessed 2026-11-19, rechecked 2026-11-20 UTC. Observed: the homepage says 'Sign up to use a pretty good LLM as much as you want, for free' under the heading 'No filters / No guidelines / No constraints'. The models page prices every model in credits per token except MythoLite (LLaMA 2 13B, Creative/Roleplay), which is listed as FREE with a 2,560-token context window and a 150-token limit. No numeric free quota, request cap or concurrency limit is published for the free model, and no payment method or country rule is stated on either page.",
       "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC. Observed: the mancer.tech homepage states 'Sign up to use a pretty good LLM as much as you want, for free' and that paying unlocks harder/better/faster models; the pricing page describes prepaid credit packs with no minimum purchase and no subscriptions, and says 'some models are free' without any numeric quota, rate limit, or token cap. Provider-documented content policy: the homepage headline is 'No filters No guidelines No constraints' and states users may run whatever prompts they want, which is the provider's own description of its filtering stance. Remaining uncertainty: no numeric free quota or rate limit is published, and the site does not state a payment method or country availability.",
       "created_at": "2026-11-20T01:15:09Z",
-      "updated_at": "2026-11-20T01:22:33Z"
+      "updated_at": "2026-11-20T01:42:45Z"
     },
     {
       "id": 730,
@@ -15975,7 +15975,7 @@
       "description": "Free, public-domain LLM and speech service exposing OpenAI-compatible text and TTS/STT endpoints that need no account or key; the site says its models can be used without any cost.",
       "offer_type": "always_free",
       "pricing_notes": "The site states 'You can interact with our models without any cost' and describes the project as public domain, free as in beer and free as in freedom; the only paid item mentioned is an optional printed reference book sold on the maintainer's shop. No subscription or per-token billing is documented.",
-      "included_limits": "Two chat hosts (hermes.ai.unturf.com/v1 and qwen.ai.unturf.com/v1) serve the same model, turboderp/Qwen3.8-27B-exl3, read live from /v1/models; a third host (speech.ai.unturf.com/v1) serves TTS and STT. The page publishes no token quota, request cap, or rate limit.",
+      "included_limits": "Two chat hosts (hermes.ai.unturf.com/v1 and qwen.ai.unturf.com/v1) serve the same model, turboderp/Qwen3.8-27B-exl3, read live from /v1/models; a third host (speech.ai.unturf.com/v1) serves TTS and STT. As of the 2026-11-20 recheck all three hosts answer HTTP 401 with type 'public_beta_closed': the endpoint needs an API key and key registration is closed. The page publishes no token quota, request cap or rate limit.",
       "eligibility_requirements": "None stated; the browser extension is described as having 'No server, no accounts', and the OpenAI-compatible endpoints are called directly without a key.",
       "payment_method_required": "no",
       "country_availability": "Not stated on the page read.",
@@ -15984,11 +15984,11 @@
       "first_seen_at": "2026-11-19T00:00:00Z",
       "last_verified_at": "2026-11-20T00:00:00Z",
       "expiration_at": null,
-      "verification_status": "verified",
-      "verification_evidence": "Source: https://uncloseai.com/. Accessed 2026-11-20 UTC. Observed: site offers free LLM chat-completion endpoints (hermes.ai.unturf.com, qwen.ai.unturf.com, currently serving turboderp/Qwen3.8-27B-exl3 on RTX 4090/3090) plus a TTS/STT endpoint, OpenAI-client compatible, described as completely public domain and free as in beer, with source at git.unturf.com; browser use requires no account. No rate limit, quota, uptime guarantee or payment-method statement is published on the page.",
-      "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC. Observed: uncloseai.com states the LLM and TTS service is usable without cost and that the project is public domain; it lists OpenAI-compatible endpoints hermes.ai.unturf.com/v1, qwen.ai.unturf.com/v1 (same model turboderp/Qwen3.8-27B-exl3, discover via /v1/models) and speech.ai.unturf.com/v1 for TTS/STT, and says the browser client needs no server or accounts. No quota, rate limit, or availability commitment is published. Provider-documented content policy: not stated; the page makes no filtering, moderation, or uncensored claim, so no such stance is recorded here. Remaining uncertainty: no published rate limit or fair-use policy, and the page does not state which jurisdiction or upstream hardware serves the endpoints, so long-term availability is unverified.",
+      "verification_status": "disputed",
+      "verification_evidence": "Source: https://uncloseai.com/ plus https://hermes.ai.unturf.com/v1/models, https://qwen.ai.unturf.com/v1/models and https://speech.ai.unturf.com/v1/models. Accessed 2026-11-20 UTC. Observed conflict: the landing page still says the models can be used 'without any cost' and lists the three OpenAI-compatible endpoints, but all three endpoints answer HTTP 401 with type 'public_beta_closed' and the message 'The public beta is closed for now. This endpoint needs an API key, and key registration is closed; check uncloseai.com for when it reopens.' The landing page does not mention the closure. Whether free access resumes, and under what key policy, is unconfirmed.",
+      "notes": "Researcher: AGENT. Accessed 2026-11-19 UTC, rechecked 2026-11-20 UTC. Observed: uncloseai.com states the LLM and TTS service is usable without cost and that the project is public domain; it lists OpenAI-compatible endpoints hermes.ai.unturf.com/v1, qwen.ai.unturf.com/v1 (same model turboderp/Qwen3.8-27B-exl3, discover via /v1/models) and speech.ai.unturf.com/v1 for TTS/STT, and says the browser client needs no server or accounts. On the 2026-11-20 recheck every one of those three endpoints returned 401 public_beta_closed ('the public beta is closed for now. This endpoint needs an API key, and key registration is closed; check uncloseai.com for when it reopens'), while the landing page still advertised free use and did not mention the closure, so the offer page and the service itself conflict. Provider-documented content policy: not stated. Remaining uncertainty: whether or when key registration reopens, and which jurisdiction or hardware serves the endpoints.",
       "created_at": "2026-11-20T01:30:22Z",
-      "updated_at": "2026-11-20T01:32:08Z"
+      "updated_at": "2026-11-20T01:41:23Z"
     },
     {
       "id": 521,
